@@ -1,8 +1,12 @@
 <?php
 
 return [
+        'TextLogo'=>'Тест',
+        'Headr'=>'',
+        'Title'=>'',
         'ads_room_name'=>'Название кампании',
         'daily_limit'=>'Дневной лимит',
+        'Ad_limit'=>'Лимит Объявления',
         'cost_per_show'=>'Цена за 1000 показов',
         'status'=>'Статус',
         'date_start'=>'Дата запуска',

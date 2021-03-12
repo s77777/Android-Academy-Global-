@@ -1,6 +1,6 @@
 <?php
 
-use app\Classes;
+namespace app\Classes;
 
 class AdsRoom extends Page {
     
