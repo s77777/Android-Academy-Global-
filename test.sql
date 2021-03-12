@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Мар 11 2021 г., 23:31
+-- Время создания: Мар 12 2021 г., 08:07
 -- Версия сервера: 8.0.23-0ubuntu0.20.04.1
 -- Версия PHP: 7.4.3
 
@@ -33,11 +33,12 @@ CREATE TABLE `ads_campaign` (
   `ads_room_id` int UNSIGNED NOT NULL,
   `ads_campaign_name` varchar(512) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `daily_limit` smallint DEFAULT NULL,
+  `Ad_limit` decimal(11,2) NOT NULL DEFAULT '0.00',
   `cost_per_show` decimal(11,2) DEFAULT '0.00',
-  `status` tinyint UNSIGNED NOT NULL DEFAULT '0',
+  `status` varchar(50) DEFAULT '0',
   `date_start` datetime DEFAULT NULL,
   `date_stop` datetime DEFAULT NULL,
-  `ads_place` smallint UNSIGNED NOT NULL DEFAULT '0',
+  `ads_place` varchar(50) DEFAULT NULL,
   `limit_show` int DEFAULT NULL,
   `theme` text,
   `target_group` int UNSIGNED DEFAULT NULL,
@@ -53,8 +54,8 @@ CREATE TABLE `ads_campaign` (
 -- Дамп данных таблицы `ads_campaign`
 --
 
-INSERT INTO `ads_campaign` (`id`, `ads_room_id`, `ads_campaign_name`, `daily_limit`, `cost_per_show`, `status`, `date_start`, `date_stop`, `ads_place`, `limit_show`, `theme`, `target_group`, `cities`, `dmh_gender`, `dmh_gender_age_start`, `dmh_gender_age_end`, `interest_category`, `link`) VALUES
-(1, 1, 'Мои объявления', 0, '1.21', 0, NULL, NULL, 0, 100, 'Товары для мам и малышей (Детские товары и услуги)', 4031000, 'Россия', 2, 18, 45, 'Дом и семья, Красота и мода, Развлечения, Товары и услуги', 'https://example.com/tr/tr');
+INSERT INTO `ads_campaign` (`id`, `ads_room_id`, `ads_campaign_name`, `daily_limit`, `Ad_limit`, `cost_per_show`, `status`, `date_start`, `date_stop`, `ads_place`, `limit_show`, `theme`, `target_group`, `cities`, `dmh_gender`, `dmh_gender_age_start`, `dmh_gender_age_end`, `interest_category`, `link`) VALUES
+(1, 1, 'Мои объявления', 0, '300.00', '1.21', '0', NULL, NULL, '0', 100, 'Товары для мам и малышей (Детские товары и услуги)', 4031000, 'Россия', 2, 18, 45, 'Дом и семья, Красота и мода, Развлечения, Товары и услуги', 'https://example.com/tr/tr');
 
 -- --------------------------------------------------------
 
